@@ -1,1 +1,68 @@
 /* home */
+@use "../base/typography" as type;
+
+:root {
+    --darkbrn: rgb(80, 60, 33);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --darkbrn: rgb(235, 205, 141);
+    }
+}
+
+body {
+    font-family: var(--font-serif);
+    width: min(80vw, 30rem);
+    margin-inline: auto;
+    padding-block-start: 1rem;
+}
+
+.poem {
+    .poem__stanza {
+         margin-block-end: 3rem;
+         font-family: var(--font-serif);
+         font-size: var(--font-size-3);
+         line-height: var(--font-lineheight-3);
+    }
+    .poem__stanza::first-letter {
+            font-size: var(--font-size-4);
+            font-weight: bold;
+            color: var(--pink-5);
+    }
+}
+
+header {
+    font-family: type.$font;
+    h1 {
+        line-height: var(--font-lineheight-0);
+        color: var(--darkbrn);
+    }
+    h2 {
+    font-size: 1.5rem;
+}
+    img {
+        margin-block-start: 2rem;
+        margin-block-end: 2rem;
+        border: 5px rgb(104, 104, 104) double;
+        box-shadow: var(--shadow-4);
+    }
+}
+
+
+
+footer {
+    font-style: italic;
+    color: var(--darkbrn);
+    width: min(80vw, 50rem);
+    text-align:center;
+    a {
+        color: var(--darkbrn);
+    }
+    a:hover {
+        color: var(--pink-5);
+    }
+    a:visited {
+        color: var(--darkbrn);
+    }
+}
